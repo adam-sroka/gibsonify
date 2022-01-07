@@ -1,6 +1,4 @@
-import 'dart:io';
-import 'package:path_provider/path_provider.dart';
-import 'package:flutter_mailer/flutter_mailer.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gibsonify/recipe/recipe.dart';
@@ -25,29 +23,47 @@ class SyncScreen extends StatelessWidget {
             body: Center(
                 child: ElevatedButton.icon(
               onPressed: () async {
-                final directory = await getApplicationDocumentsDirectory();
-                final path = directory.path;
+                const emailBody =
+                    'Gibsonify collection and recipe data attached as a JSON string. <br> Data can be pasted into https://www.convertcsv.com/json-to-csv.htm to obtain a csv file.';
+                // final directory = await getApplicationDocumentsDirectory();
+                // final path = directory.path;
 
-                final _recipefilePath = '$path/recipe_data.txt';
-                final _recipefile = File(_recipefilePath);
-                _recipefile.writeAsString(recipeJson);
+                // final _recipefilePath = '$path/recipe_data.txt';
+                // final _recipefile = File(_recipefilePath);
+                // _recipefile.writeAsString(recipeJson);
 
-                final _collectionfilePath = '$path/collection_data.txt';
-                final _collectionfile = File(_collectionfilePath);
-                _collectionfile.writeAsString(collectionJson);
+                // final _collectionfilePath = '$path/collection_data.txt';
+                // final _collectionfile = File(_collectionfilePath);
+                // _collectionfile.writeAsString(collectionJson);
 
-                final MailOptions mailOptions = MailOptions(
-                  body:
-                      'Gibsonify collection and recipe data attached as a JSON string. <br> Data can be pasted into https://www.convertcsv.com/json-to-csv.htm to obtain a csv file.',
+                // final MailOptions mailOptions = MailOptions(
+                //   body:
+                //       'Gibsonify collection and recipe data attached as a JSON string. <br> Data can be pasted into https://www.convertcsv.com/json-to-csv.htm to obtain a csv file.',
+                //   subject: 'Gibsonify collection and recipe data',
+                //   recipients: [],
+                //   isHTML: true,
+                //   bccRecipients: [],
+                //   ccRecipients: [],
+                //   attachments: [_collectionfilePath, _recipefilePath],
+                // );
+
+                // await FlutterMailer.send(mailOptions);
+
+                final Email email = Email(
+                  body: emailBody +
+                      '<br><br>' +
+                      collectionJson +
+                      '<br><br>' +
+                      recipeJson,
                   subject: 'Gibsonify collection and recipe data',
                   recipients: [],
+                  cc: [],
+                  bcc: [],
+                  attachmentPaths: [],
                   isHTML: true,
-                  bccRecipients: [],
-                  ccRecipients: [],
-                  attachments: [_collectionfilePath, _recipefilePath],
                 );
 
-                await FlutterMailer.send(mailOptions);
+                await FlutterEmailSender.send(email);
               },
               icon: const Icon(Icons.send, size: 18),
               label: const Text("Export saved data as JSON"),
