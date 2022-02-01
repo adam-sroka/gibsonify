@@ -2,9 +2,10 @@
 import 'package:test/test.dart';
 
 // TODO: write tests
+// TODO: ahha, evidently this doesn't run!
 void main() {
   group('A group of tests', () {
-    final awesome = true;
+    const awesome = true;
 
     setUp(() {
       // Additional setup goes here.
