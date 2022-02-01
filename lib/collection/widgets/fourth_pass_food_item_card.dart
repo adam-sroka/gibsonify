@@ -61,8 +61,8 @@ class FourthPassFoodItemCard extends StatelessWidget {
             TextFormField(
               readOnly: true,
               initialValue: foodItem.recipe?.recipeName.value ?? '',
-              decoration: InputDecoration(
-                icon: const Icon(Icons.bookmark),
+              decoration: const InputDecoration(
+                icon: Icon(Icons.bookmark),
                 labelText: 'Food recipe',
                 helperText: 'What is the recipe of this food',
                 // TODO:

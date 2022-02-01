@@ -1,5 +1,3 @@
-import 'package:gibsonify_repository/gibsonify_repository.dart';
-
 import 'package:gibsonify_api/gibsonify_api.dart';
 
 /// Repository that handles requests for GibsonsForms and Recipes

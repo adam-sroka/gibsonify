@@ -62,7 +62,7 @@ class GibsonsForm extends Equatable {
         foodItems = _jsonDecodeFoodItems(json['foodItems']);
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
     data['householdId'] = householdId.toJson();
     data['respondentName'] = respondentName.toJson();
@@ -158,7 +158,7 @@ class HouseholdId extends FormzInput<String, HouseholdIdValidationError> {
   // Formz completely. It might be easier to just have all these values
   // as strings and implement a couple of validator methods in GibsonsForm
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;
@@ -181,7 +181,7 @@ class RespondentName extends FormzInput<String, RespondentNameValidationError> {
   const RespondentName.dirty([String value = '']) : super.dirty(value);
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;
@@ -206,7 +206,7 @@ class RespondentTelNumber
   const RespondentTelNumber.dirty([String value = '']) : super.dirty(value);
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;
@@ -233,7 +233,7 @@ class SensitizationDate
   const SensitizationDate.dirty([String value = '']) : super.dirty(value);
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;
@@ -269,7 +269,7 @@ class RecallDay extends FormzInput<String, RecallDayValidationError> {
   ];
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;
@@ -294,7 +294,7 @@ class InterviewDate extends FormzInput<String, InterviewDateValidationError> {
   const InterviewDate.dirty([String value = '']) : super.dirty(value);
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;
@@ -320,7 +320,7 @@ class InterviewStartTime
   const InterviewStartTime.dirty([String value = '']) : super.dirty(value);
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;
@@ -346,7 +346,7 @@ class InterviewEndTime
   const InterviewEndTime.dirty([String value = '']) : super.dirty(value);
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;
@@ -381,7 +381,7 @@ class InterviewOutcome
   ];
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;
@@ -407,7 +407,7 @@ class Comments extends FormzInput<String, CommentsValidationError> {
   const Comments.dirty([String value = '']) : super.dirty(value);
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['value'] = value;
     data['pure'] = pure.toString();
     return data;

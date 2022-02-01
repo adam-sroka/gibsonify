@@ -12,7 +12,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   HomeBloc({required GibsonifyRepository gibsonifyRepository})
       : _gibsonifyRepository = gibsonifyRepository,
-        super(HomeState()) {
+        super(const HomeState()) {
     // TODO: implement a subscription to a stream of GibsonsForms
     on<GibsonsFormsLoaded>(_onGibsonsFormsLoaded);
     on<GibsonsFormDeleted>(_onGibsonsFormDeleted);

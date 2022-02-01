@@ -119,8 +119,8 @@ class SecondPassFoodItemCard extends StatelessWidget {
               initialValue: foodItem.recipe?.recipeName.value ?? '',
               readOnly: true,
               key: UniqueKey(),
-              decoration: InputDecoration(
-                icon: const Icon(Icons.bookmark),
+              decoration: const InputDecoration(
+                icon: Icon(Icons.bookmark),
                 labelText: 'Food recipe',
                 helperText: 'What is the recipe of this food',
                 // TODO:
