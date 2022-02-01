@@ -293,6 +293,5 @@ class InterviewStartTimeInput extends StatelessWidget {
   }
 }
 
-
-// Or perhaps make the bottom navigation bar be a part of the state and only 
+// Or perhaps make the bottom navigation bar be a part of the state and only
 // allow to pass to next one if previous one is complete
