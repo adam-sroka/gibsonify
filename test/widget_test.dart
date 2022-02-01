@@ -5,4 +5,21 @@
 
 // TODO: add tests
 
-void main() {}
+// void main() {}
+
+import 'package:test/test.dart';
+
+// TODO: write tests
+void main() {
+  group('A group of tests', () {
+    const awesome = true;
+
+    setUp(() {
+      // Additional setup goes here.
+    });
+
+    test('First Test', () {
+      expect(awesome, isTrue);
+    });
+  });
+}
