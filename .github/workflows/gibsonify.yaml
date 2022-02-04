@@ -1,6 +1,11 @@
 name: Linters
 
 on: pull_request
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
 
 jobs:
   validate-commits:
