@@ -8,9 +8,6 @@ on:
 jobs:
   python-check:
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 4
-
     steps:
     - uses: actions/checkout@v2
       with:
