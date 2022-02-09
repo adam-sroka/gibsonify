@@ -26,4 +26,4 @@ jobs:
         python -m pip install Commitizen
     - name: Run commitizen check
       run: |
-        cz check --rev-range $ec782364f54a7cde403f501ec092dd2d6b68d4e2..HEAD
+        cz check --rev-range ec782364f54a7cde403f501ec092dd2d6b68d4e2..HEAD
